@@ -1,0 +1,127 @@
+header{
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 94%;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+#leftheader, #rightheader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo{
+    background-image: url("logo.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 130px;
+    height: 130px;
+}
+
+#navheader .linkbutton, #log .linkbutton{
+    background-color: gray;  
+    border-radius: 3px;
+    margin: 2px 2px; 
+    text-decoration: none;
+    color: initial;
+    padding: 8px 20px;
+}
+
+#navheader .linkbutton:hover{
+    background-color: lightblue;
+}
+
+#navheader, #log{
+    margin-left: 30px;
+    display: flex;
+    flex-flow: wrap;
+}
+
+#searchbox{
+    display: flex;
+    align-items: center;
+    transition-duration: 2s;
+}
+
+#search{
+    width: 200px;
+    height: 30px;
+    transform: scaleX(0);
+    transition-duration: 1s;
+    border-style: none;
+    border-radius: 0;
+    text-align: center;
+}
+
+#searchicon{
+    margin-left: 10px;
+    background: url("search.png");
+    width: 30px;
+    height: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    cursor: pointer;
+}
+
+#showsearch:checked ~ #search{
+    transform: scaleX(1);
+}
+
+#showsearch:checked ~ #hiddenbuttonsearch{
+    display: initial;
+}
+
+#showsearch:checked ~ #showsearchicon{
+    display: none;
+}
+
+#hiddenbuttonsearch{
+    display: none;
+}
+
+
+@media only screen and (max-width: 768px){
+
+
+
+    header{
+        padding-top: 10px;
+        width: 95%;
+        flex-flow: wrap;
+    }
+
+    #rightheader{
+        position: sticky;
+        justify-content: space-between;
+        align-items: center;
+        height: 100px;
+        flex-flow: wrap column-reverse;
+        order: -10;
+        margin: auto;
+
+    }
+
+    #leftheader{
+        margin: auto;
+        flex-flow: wrap;
+    }
+
+    #navheader{
+        justify-content: center;
+    }
+
+    #log{
+        justify-content: center;
+    }
+
+    #navheader, #log{
+        margin-left: 0px;
+    }
+
+}
